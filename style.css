@@ -1,0 +1,164 @@
+:root {
+  --pink: #f5a9c9;
+  --shadow: 0 2px 5px rgba(0,0,0,0.3);
+  --font-decor: 'Sacramento', cursive;
+  --font-main: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: #fffafc;
+  overflow-x: hidden;
+}
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('1.jpg'); /* ganti sesuai nama fotomu */
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(1px);
+  z-index: 0;
+}
+
+.hero main {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.6);
+  padding: 30px 50px;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+}
+
+/* === TEKS UTAMA === */
+.hero h1 {
+  font-family: var(--font-decor);
+  font-size: 3rem;
+  color: #c2185b;
+  text-shadow: var(--shadow);
+}
+
+/* === JAM DAN COUNTDOWN === */
+#clock, #countdown {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #ff1493;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+}
+
+#countdown {
+  color: #ff69b4;
+  font-size: 1.1em;
+  display: block;
+  margin: 10px auto;
+}
+
+/* === TOMBOL === */
+.hero a {
+  color: var(--pink);
+  background-color: beige;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+/* === SECTION BERIKUTNYA === */
+.next-page {
+  height: 100vh;
+  background-color: #fff0f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-page h2 {
+  color: #e91e63;
+  font-family: var(--font-decor);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.next-page p {
+  font-size: 1.2rem;
+  color: #333;
+}
+.h2{
+   font-family: var(--font-decor);
+   font-size: 3rem;
+  color: #c2185b;
+  text-shadow: var(--shadow);
+}
+
+.next-page{
+  font-size: 1.4rem;
+  color: #474446;
+  text-shadow: var(--shadow);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  html { font-size: 90%; }
+  .hero main { padding: 20px 30px; }
+}
+/* Lokasi Section */
+.section-lokasi {
+  padding: 80px 20px;
+  background: #fffafc;
+  text-align: center;
+}
+
+.section-lokasi h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  font-family: 'Sacramento', cursive;
+  color: #f27da7;
+}
+
+.section-lokasi p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.btn-map {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f5a9c9;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-map:hover {
+  background-color: #f27da7;
+  transform: scale(1.05);
+}
+
